@@ -23,9 +23,11 @@ public class StockServiceApi {
         return instance;
     }
 
+    String BASE_URL="https://www.alphavantage.co/query?";
+
     public Retrofit getRetrofit() {
         return new Retrofit.Builder()
-                .baseUrl(BuildConfig.BASE_URL)
+                .baseUrl(BASE_URL)
                 .client(new OkHttpClient.Builder()
                         .readTimeout(30, TimeUnit.SECONDS)
                         .writeTimeout(30, TimeUnit.SECONDS)
