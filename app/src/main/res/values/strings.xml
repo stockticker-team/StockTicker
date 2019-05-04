@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">StockTicker</string>
+    <string name="app_label">Stock Ticker</string>
 </resources>
