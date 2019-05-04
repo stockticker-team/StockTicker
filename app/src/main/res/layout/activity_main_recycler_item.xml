@@ -1,52 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <data>
+
         <variable
             name="mainactivityviewmodel"
             type="quiz.honeywell.com.stockticker.viewmodel.MainActivityViewModel">
 
         </variable>
     </data>
-    <LinearLayout
+
+    <RelativeLayout
+        android:layout_margin="3dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@color/color_bg"
-        android:padding="@dimen/dp_10">
-    <TextView
-        android:id="@+id/main_tv_compname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@{mainactivityviewmodel.compName}"
-        android:textSize="22sp"
-        android:textColor="@color/color_tv"/>
-        <RelativeLayout
+        android:padding="10dp"
+        android:background="@drawable/black_rectangle">
+
+        <TextView
+            android:id="@+id/main_tv_compname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ABC"
+            android:textColor="@android:color/black"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/main_tv_compLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="A"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/main_tv_compname"
+            android:background="#c9c9c9" />
+
+        <TextView
+            android:id="@+id/price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_10"
-            android:paddingTop="@dimen/dp_10"
-            android:paddingBottom="@dimen/dp_10">
-            <TextView
-                android:id="@+id/main_tv_compLogo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@{mainactivityviewmodel.compLogo}"
-                android:textSize="16sp"
-                android:layout_alignParentLeft="true"
-                android:textColor="@color/color_tv"
-                />
+            android:layout_below="@+id/view"
+            android:text="Price"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/main_tv_stockAmt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:textColor="@color/color_tv"
-                android:text="@{mainactivityviewmodel.stockAmt}"/>
 
-        </RelativeLayout>
+        <TextView
+            android:id="@+id/change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/price"
+            android:text="2.11232" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/change_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/price"
+            android:layout_toRightOf="@+id/change"
+            android:text="(+0.02)" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/price"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:layout_padding="6dp"
+            android:text="Remove" />
+
+    </RelativeLayout>
+
 
 </layout>
