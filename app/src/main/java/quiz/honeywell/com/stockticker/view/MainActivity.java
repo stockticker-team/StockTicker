@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mainDO = ViewModelProviders.of(this).get(MainActivityViewModel.class);
 
 
         ArrayList<String> searchArrayList= new ArrayList<String>();
