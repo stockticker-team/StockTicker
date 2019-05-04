@@ -17,5 +17,5 @@ steps:
   inputs:
     serverEndpoint: 'fc430d58-b98e-4624-9902-e5736e7a2d51'
     appSlug: 'https://appcenter.ms/users/stockticker.team-gmail.com/Stock-Ticker'
-    app: '\app\build\outputs\apk'
+    app: '$(build.artifactStagingDirectory)'
     releaseNotesInput: 'New Build'
