@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="mainactivityviewmodel"
+            type="quiz.honeywell.com.stockticker.viewmodel.MainActivityViewModel">
+
+        </variable>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/color_bg"
+        android:padding="@dimen/dp_10">
+    <TextView
+        android:id="@+id/main_tv_compname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{mainactivityviewmodel.compName}"
+        android:textSize="22sp"
+        android:textColor="@color/color_tv"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10">
+            <TextView
+                android:id="@+id/main_tv_compLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{mainactivityviewmodel.compLogo}"
+                android:textSize="16sp"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/color_tv"
+                />
+
+            <TextView
+                android:id="@+id/main_tv_stockAmt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/color_tv"
+                android:text="@{mainactivityviewmodel.stockAmt}"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>
