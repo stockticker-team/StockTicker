@@ -6,4 +6,5 @@
     <string name="MarketCap">Market Cap</string>
     <string name="PrevClose">Prev Close</string>
     <string name="PERatio">P/E Ratio (ttm)</string>
+    <string name="go">GO</string>
 </resources>

@@ -16,7 +16,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ActivityMainBinding binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
         mainDO = ViewModelProviders.of(this).get(MainActivityViewModel.class);
+        mainDO = new MainActivityViewModel();
     }
 
     @Override
@@ -28,13 +30,5 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-    }
-
-    private View bind(){
-        ActivityMainBinding binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
-        mainDO = new MainActivityViewModel();
-        binding.setMainactivityviewmodel(mainDO);
-        return binding.getRoot();
-
     }
 }
