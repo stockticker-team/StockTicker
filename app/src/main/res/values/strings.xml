@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">StockTicker</string>
     <string name="app_label">Stock Ticker</string>
+    <string name="wkRange">52wk Range</string>
+    <string name="Open">Open</string>
+    <string name="MarketCap">Market Cap</string>
+    <string name="PrevClose">Prev Close</string>
+    <string name="PERatio">P/E Ratio (ttm)</string>
 </resources>
