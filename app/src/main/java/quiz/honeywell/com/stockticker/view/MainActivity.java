@@ -20,11 +20,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mainDO = ViewModelProviders.of(this).get(MainActivityViewModel.class);
 
+        ActivityMainBinding binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
+        mainDO = ViewModelProviders.of(this).get(MainActivityViewModel.class);
+        mainDO = new MainActivityViewModel();
 
         ArrayList<String> searchArrayList= new ArrayList<String>();
-
         searchArrayList.add("Facebook");
         searchArrayList.add("Amazon");
         searchArrayList.add("MicroSoft");
@@ -36,9 +37,6 @@ public class MainActivity extends AppCompatActivity {
         AutoCompleteAdapter adapter = new AutoCompleteAdapter(this, android.R.layout.simple_dropdown_item_1line, android.R.id.text1, searchArrayList);
         autoCompleteTextView = (AutoCompleteTextView) findViewById(R.id.search);
         autoCompleteTextView.setAdapter(adapter);
-
-
-        mainDO = ViewModelProviders.of(this).get(MainActivityViewModel.class);
     }
 
     @Override
@@ -50,13 +48,5 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-    }
-
-    private View bind(){
-        ActivityMainBinding binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
-        mainDO = new MainActivityViewModel();
-        binding.setMainactivityviewmodel(mainDO);
-        return binding.getRoot();
-
     }
 }
