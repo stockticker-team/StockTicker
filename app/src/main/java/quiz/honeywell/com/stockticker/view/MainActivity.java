@@ -1,5 +1,6 @@
 package quiz.honeywell.com.stockticker.view;
 
+import android.arch.lifecycle.ViewModelProviders;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,8 +16,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
+        mainDO = ViewModelProviders.of(this).get(MainActivityViewModel.class);
     }
 
     @Override
