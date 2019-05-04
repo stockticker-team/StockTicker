@@ -6,9 +6,10 @@
 
         <variable
             name="mainactivityviewmodel"
-            type="quiz.honeywell.com.stockticker.viewmodel.MainActivityViewModel">
-
-        </variable>
+            type="quiz.honeywell.com.stockticker.viewmodel.MainActivityViewModel"/>
+        <variable
+            name="companyData"
+            type="String" />
     </data>
 
     <RelativeLayout
@@ -22,7 +23,7 @@
             android:id="@+id/main_tv_compname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ABC"
+            android:text="@{companyData}"
             android:textColor="@android:color/black"
             android:textSize="22sp" />
 
