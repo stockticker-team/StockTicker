@@ -8,6 +8,11 @@
         </variable>
     </data>
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <AutoCompleteTextView
         android:id="@+id/search"
         android:layout_width="match_parent"
@@ -21,9 +26,7 @@
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:adapter="@{mainactivityviewmodel.adapter}"
-        android:background="@color/color_bg"
-        app:data="@{mainactivityviewmodel.data}">
+        android:background="@color/color_bg"/>
 
-    </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
 </layout>

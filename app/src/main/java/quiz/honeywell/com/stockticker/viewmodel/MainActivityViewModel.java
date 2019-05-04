@@ -1,12 +1,14 @@
 package quiz.honeywell.com.stockticker.viewmodel;
 
+import android.arch.lifecycle.ViewModel;
+
 import java.io.Serializable;
 
 /**
  * Created by ADMIN on 5/4/2019.
  */
 
-public class MainActivityViewModel{
+public class MainActivityViewModel extends ViewModel {
 
     private String compName = "";
     private String compLogo = "";
