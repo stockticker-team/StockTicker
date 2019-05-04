@@ -16,7 +16,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug{
-            buildConfigField("String","BASE_URL","https://www.alphavantage.co/query?")
         }
     }
     configurations.all {
@@ -44,7 +43,6 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
-    implementation 'com.squareup.okhttp3:okhttp:3.14.1'
 
     //Live Data and ViewModel
     implementation "android.arch.lifecycle:extensions:$lifecycle_version"
