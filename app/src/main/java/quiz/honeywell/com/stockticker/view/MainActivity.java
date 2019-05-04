@@ -15,8 +15,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        View view = bind();
-//app:text="@{mainactivityviewmodel.complogo}"
+
+
     }
 
     @Override
