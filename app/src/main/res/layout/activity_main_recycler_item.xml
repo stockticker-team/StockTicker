@@ -76,7 +76,6 @@
             android:layout_alignParentEnd="true"
             android:layout_marginRight="10dp"
             android:gravity="center"
-            android:layout_padding="6dp"
             android:text="Remove" />
 
     </RelativeLayout>
